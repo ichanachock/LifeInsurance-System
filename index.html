@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance CRM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">LI</div>
+                <div>
+                    <strong>Life CRM</strong>
+                    <span>ระบบติดตามลูกค้าประกันชีวิต</span>
+                </div>
+            </div>
+
+            <nav class="nav" aria-label="เมนูหลัก">
+                <button class="nav-button is-active" data-view="dashboard">ภาพรวม</button>
+                <button class="nav-button" data-view="leads">ลูกค้า</button>
+                <button class="nav-button" data-view="tasks">งานติดตาม</button>
+                <button class="nav-button" data-view="scripts">สคริปต์ขาย</button>
+                <button class="nav-button" data-view="intake">ฟอร์มรับลูกค้า</button>
+            </nav>
+
+            <div class="sidebar-note">
+                ข้อมูลถูกบันทึกในเครื่องนี้อัตโนมัติ เหมาะสำหรับเริ่มใช้งานทันที ก่อนต่อฐานข้อมูลกลางในขั้นถัดไป
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Super Life 99/20</p>
+                    <h1 id="viewTitle">ภาพรวมงานขาย</h1>
+                </div>
+                <div class="topbar-actions">
+                    <button class="ghost-button" id="exportCsvButton" type="button">Export CSV</button>
+                    <button class="primary-button" id="openLeadDialogButton" type="button">เพิ่มลูกค้า</button>
+                </div>
+            </header>
+
+            <section class="view is-active" id="dashboardView">
+                <div class="stats-grid" id="statsGrid"></div>
+
+                <div class="content-grid">
+                    <section class="panel">
+                        <div class="panel-header">
+                            <h2>ลูกค้าที่ควรติดตาม</h2>
+                            <button class="text-button" data-view-link="leads" type="button">ดูทั้งหมด</button>
+                        </div>
+                        <div class="lead-list compact" id="priorityLeads"></div>
+                    </section>
+
+                    <section class="panel">
+                        <div class="panel-header">
+                            <h2>งานวันนี้</h2>
+                            <button class="text-button" data-view-link="tasks" type="button">ไปที่งาน</button>
+                        </div>
+                        <div class="task-list" id="todayTasks"></div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="view" id="leadsView">
+                <div class="toolbar">
+                    <input class="search-input" id="searchInput" type="search" placeholder="ค้นหาชื่อ หมู่บ้าน เบอร์โทร หรือสินค้า">
+                    <select id="statusFilter" aria-label="กรองสถานะ">
+                        <option value="all">ทุกสถานะ</option>
+                        <option value="prospect">ลูกค้าเป้าหมาย</option>
+                        <option value="contacted">ติดต่อแล้ว</option>
+                        <option value="meeting">นัดพบ</option>
+                        <option value="proposal">เสนอแบบแล้ว</option>
+                        <option value="closed">ปิดการขาย</option>
+                        <option value="lost">ไม่สนใจ</option>
+                    </select>
+                </div>
+
+                <div class="lead-workspace">
+                    <section class="panel lead-list-panel">
+                        <div class="lead-list" id="leadList"></div>
+                    </section>
+                    <section class="panel detail-panel" id="leadDetail"></section>
+                </div>
+            </section>
+
+            <section class="view" id="tasksView">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>งานติดตามทั้งหมด</h2>
+                        <span class="muted" id="taskCount"></span>
+                    </div>
+                    <div class="task-list large" id="taskList"></div>
+                </div>
+            </section>
+
+            <section class="view" id="scriptsView">
+                <div class="script-layout">
+                    <div class="panel">
+                        <h2>ขั้นตอนสนทนา</h2>
+                        <div class="script-tabs" id="scriptTabs"></div>
+                    </div>
+                    <div class="panel script-card" id="scriptCard"></div>
+                </div>
+            </section>
+
+            <section class="view" id="intakeView">
+                <div class="intake-hero">
+                    <div>
+                        <p class="eyebrow">แบบฟอร์มสำหรับส่งให้ลูกค้า</p>
+                        <h2>รับข้อมูลลูกค้าใหม่เข้าระบบ CRM</h2>
+                        <p>กรอกข้อมูลจากหน้างานหรือให้ลูกค้ากรอกเอง ระบบจะบันทึกเป็น lead ใหม่ทันที</p>
+                    </div>
+                </div>
+
+                <form class="panel form-grid" id="intakeForm">
+                    <label>
+                        ชื่อ-นามสกุล
+                        <input name="name" required placeholder="เช่น คุณสมชาย ใจดี">
+                    </label>
+                    <label>
+                        เบอร์โทร
+                        <input name="phone" required inputmode="tel" placeholder="0812345678">
+                    </label>
+                    <label>
+                        อายุ
+                        <input name="age" type="number" min="1" max="120" required placeholder="เช่น 35">
+                    </label>
+                    <label>
+                        อาชีพ
+                        <input name="occupation" required placeholder="เช่น พนักงานบริษัท / เจ้าของกิจการ">
+                    </label>
+                    <label>
+                        งบประมาณต่อเดือน
+                        <input name="budget" type="number" min="0" step="100" required placeholder="เช่น 2000">
+                    </label>
+                    <label>
+                        สิ่งที่สนใจเพิ่มเติม
+                        <select name="interest">
+                            <option value="">ยังไม่ระบุ</option>
+                            <option>คุ้มครองรายได้ครอบครัว</option>
+                            <option>ทุนการศึกษาบุตร</option>
+                            <option>ค่ารักษาพยาบาล</option>
+                            <option>วางแผนเกษียณ</option>
+                            <option>ให้ช่วยแนะนำ</option>
+                        </select>
+                    </label>
+                    <label class="full-span">
+                        หมายเหตุ
+                        <textarea name="notes" rows="4" placeholder="รายละเอียดที่คุยไว้ ความกังวล หรือเวลาที่สะดวกให้ติดต่อ"></textarea>
+                    </label>
+                    <button class="primary-button full-span" type="submit">บันทึกเข้าระบบ</button>
+                    <p class="form-status full-span" id="intakeStatus" role="status"></p>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <dialog class="lead-dialog" id="leadDialog">
+        <form method="dialog" class="dialog-card" id="leadForm">
+            <div class="dialog-header">
+                <h2 id="leadDialogTitle">เพิ่มลูกค้า</h2>
+                <button class="icon-button" value="cancel" type="submit" aria-label="ปิด">×</button>
+            </div>
+            <input type="hidden" name="id">
+            <div class="form-grid">
+                <label>
+                    ชื่อ-นามสกุล
+                    <input name="name" required>
+                </label>
+                <label>
+                    เบอร์โทร
+                    <input name="phone" required inputmode="tel">
+                </label>
+                <label>
+                    ประเภท
+                    <input name="type" placeholder="เช่น กำนัน">
+                </label>
+                <label>
+                    พื้นที่ / หมู่บ้าน
+                    <input name="village">
+                </label>
+                <label>
+                    สถานะ
+                    <select name="status">
+                        <option value="prospect">ลูกค้าเป้าหมาย</option>
+                        <option value="contacted">ติดต่อแล้ว</option>
+                        <option value="meeting">นัดพบ</option>
+                        <option value="proposal">เสนอแบบแล้ว</option>
+                        <option value="closed">ปิดการขาย</option>
+                        <option value="lost">ไม่สนใจ</option>
+                    </select>
+                </label>
+                <label>
+                    คะแนนโอกาสขาย
+                    <input name="score" type="number" min="0" max="100" value="50">
+                </label>
+                <label>
+                    สินค้าที่สนใจ
+                    <input name="product" value="Super Life 99/20">
+                </label>
+                <label>
+                    นัดติดตามครั้งถัดไป
+                    <input name="nextFollowUp" type="date">
+                </label>
+                <label class="full-span">
+                    หมายเหตุ
+                    <textarea name="notes" rows="4"></textarea>
+                </label>
+            </div>
+            <div class="dialog-actions">
+                <button class="ghost-button" value="cancel" type="submit">ยกเลิก</button>
+                <button class="primary-button" id="saveLeadButton" type="button">บันทึก</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
