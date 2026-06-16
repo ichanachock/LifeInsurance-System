@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Primary Meta Tags -->
+  <title>FIN Insurance Broker | ระบบตรวจสอบสมาชิกและบริการประกันภัย</title>
+  <meta name="title" content="FIN Insurance Broker | ระบบตรวจสอบสมาชิกและบริการประกันภัย">
+  <meta name="description" content="เข้าสู่ระบบ FIN Insurance Broker ผ่าน LINE เพื่อรับสิทธิพิเศษ ตรวจสอบกรมธรรม์ และบริการจัดการประกันภัยแบบครบวงจร">
+  <meta name="keywords" content="ประกันภัย, ฟินอินชัวรันส์, FIN Broker, ตรวจสอบกรมธรรม์, ประกันรถยนต์, LINE LIFF">
+  <meta name="author" content="FIN Insurance Broker">
+
+  <!-- Open Graph / Facebook / LINE (สำคัญมากสำหรับ LIFF) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fininsurance-member.com/finhome"> <!-- ใส่ URL ของหน้า LIFF Boss -->
+  <meta property="og:title" content="FIN Insurance Broker | ยืนยันตัวตนเพื่อเข้าใช้งาน">
+  <meta property="og:description" content="คลิกเพื่อยืนยันตัวตนผ่าน LINE และเข้าสู่ระบบจัดการประกันภัย FIN Broker">
+  <meta property="og:image" content="https://ebudkvylrtkzmaaipwsv.supabase.co/storage/v1/object/public/user-images/Ue6d21e868a3f695dda1a1643721c5372/1766835776687.jpeg"> <!-- รูป Banner ขนาด 1200x630 -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://fininsurance-member.com/finhome">
+  <meta property="twitter:title" content="FIN Insurance Broker | ระบบจัดการประกันภัย">
+  <meta property="twitter:description" content="ยืนยันตัวตนผ่าน LINE เพื่อเข้าถึงระบบ Smart Admin และบริการประกันภัยจาก FIN Broker">
+  <meta property="twitter:image" content="https://ebudkvylrtkzmaaipwsv.supabase.co/storage/v1/object/public/user-images/Ue6d21e868a3f695dda1a1643721c5372/1766835776687.jpeg">
+
+  <!-- Mobile & App Control -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://fininsurance-member.com/finhome" />
+
+  <!-- Tailwind CSS สำหรับตกแต่งหน้า Loading -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- LIFF SDK -->
+  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 สำหรับ Alert สวยๆ -->
+  <link href="https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/LINESeedSansTH/LINESeedSansTH.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'LINE Seed Sans TH', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* CSS ปรับแต่งพิเศษเพื่อให้เห็นภาพเต็ม */
+    .inner-logo {
+      object-fit: contain; /* แสดงภาพเต็ม ไม่โดนครอบ */
+      width: 100%; /* ขยายเต็มพื้นที่ Div ครอบ */
+      height: 100%;
+      border-radius: 50%; /* ตัดขอบรูปเป็นวงกลมเพื่อให้เข้ากับ Spin */
+      background-color: white; /* ใส่พื้นหลังขาวป้องกันรูปมีขอบใส */
+    }
+  </style>
+
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen m-0 p-0 select-none">
+
+  <!-- Loading & Welcome UI Container -->
+  <div id="app-container" class="text-center p-8 bg-white rounded-3xl shadow-xl max-w-sm w-full mx-4 border border-gray-100 z-50 transition-all duration-500">
+
+    <!-- ส่วนแสดงผลรูปภาพ (ปรับเปลี่ยนได้ระหว่าง Logo กับ รูปโปรไฟล์ผู้ใช้) -->
+    <div class="relative flex items-center justify-center mb-6">
+      <!-- วงแหวน Animation หมุนรอบๆ -->
+      <div id="loading-spinner" class="animate-spin inline-block w-24 h-24 border-[3px] border-emerald-500 border-t-transparent rounded-full" role="status"></div>
+
+      <!-- กรอบใส่รูปภาพ -->
+      <div class="absolute flex items-center justify-center w-16 h-16">
+        <img id="display-avatar" src="https://ebudkvylrtkzmaaipwsv.supabase.co/storage/v1/object/public/user-images/Ue6d21e868a3f695dda1a1643721c5372/1766835776687.jpeg"
+          alt="Avatar" class="w-full h-full object-contain rounded-full transition-all duration-500">
+      </div>
+    </div>
+
+    <!-- ข้อความหลักและข้อความย่อย -->
+    <div id="status-text-main" class="text-gray-800 font-semibold text-lg animate-pulse">กำลังเตรียมระบบ...</div>
+    <div id="status-text-sub" class="text-gray-400 text-sm mt-2 font-light flex items-center justify-center gap-2">
+      <!-- จุด Loading จะแทรกตรงนี้ -->
+    </div>
+
+    <!-- Error Screen (ซ่อนไว้เป็นค่าเริ่มต้น) -->
+    <div id="error-screen" class="hidden mt-4 p-4 bg-red-50 border border-red-100 rounded-xl">
+      <p id="error-message" class="text-red-600 text-sm font-medium"></p>
+    </div>
+  </div>
+
+  <script>
+    const LIFF_ID = "2010419567-tIgtTpB2"; // ใส่ LIFF ID ของคุณที่นี่
+
+    // ฟังก์ชันแจ้งเตือนด้วย SweetAlert2 (แบบ Toast มุมขวาบน)
+    function showToast(message, icon = 'info') {
+      if (typeof Swal !== 'undefined') {
+        Swal.fire({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 2500,
+          timerProgressBar: true,
+          icon,
+          title: message,
+          background: '#fff',
+          color: '#2d2d2d',
+          customClass: { popup: 'shadow-lg rounded-xl border border-gray-100' }
+        });
+      } else {
+        console[icon === 'error' ? 'error' : 'log'](message);
+      }
+    }
+
+    // ฟังก์ชันแสดง Alert สวยๆ กรณีไม่พบ URL หรือเกิด Error ร้ายแรง
+    function showCustomAlert(title, text, icon = 'error') {
+      if (typeof Swal !== 'undefined') {
+        Swal.fire({
+          title: title,
+          text: text,
+          icon: icon,
+          confirmButtonText: 'ปิดหน้าต่างนี้',
+          confirmButtonColor: '#10b981', // สี Emerald เขียวสวยงามเข้ากับธีม
+          background: '#fff',
+          customClass: {
+            popup: 'rounded-3xl shadow-2xl p-6 border border-gray-100',
+            title: 'font-semibold text-xl text-gray-800',
+            htmlContainer: 'text-sm text-gray-500 font-light mt-2',
+            confirmButton: 'rounded-xl px-6 py-2.5 font-medium text-sm'
+          },
+          buttonsStyling: true,
+          allowOutsideClick: false, // บังคับให้กดปุ่มเท่านั้น
+          allowEscapeKey: false
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // ปิดหน้าต่าง LIFF ทันทีเมื่อผู้ใช้กดตกลง
+            if (liff.isInClient()) {
+              liff.closeWindow();
+            } else {
+              window.close();
+            }
+          }
+        });
+      } else {
+        alert(`${title}: ${text}`);
+      }
+    }
+
+    // ฟังก์ชันอัปเดตสถานะหน้าจอ
+    function renderLoading(mainText, subText = 'กรุณารอสักครู่...') {
+      const main = document.getElementById('status-text-main');
+      const sub = document.getElementById('status-text-sub');
+      const errorScreen = document.getElementById('error-screen');
+
+      if (main) {
+        main.textContent = mainText;
+        main.classList.add('animate-pulse');
+      }
+      if (sub) {
+        sub.innerHTML = `
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          ${subText}
+        `;
+      }
+      if (errorScreen) errorScreen.classList.add('hidden');
+    }
+
+    // ฟังก์ชันแสดงหน้าจอยินดีต้อนรับ (แสดงรูปและชื่อผู้ใช้ LINE)
+    function renderWelcomeScreen(displayName, pictureUrl) {
+      const main = document.getElementById('status-text-main');
+      const sub = document.getElementById('status-text-sub');
+      const avatar = document.getElementById('display-avatar');
+      const spinner = document.getElementById('loading-spinner');
+
+      // 1. เปลี่ยนรูปเป็นรูปโปรไฟล์ LINE และเปลี่ยนการแสดงผลเป็นแบบเต็มวงกลม (Object-Cover)
+      if (pictureUrl && avatar) {
+        avatar.src = pictureUrl;
+        avatar.classList.remove('object-contain');
+        avatar.classList.add('object-cover', 'border-2', 'border-emerald-500', 'p-0.5');
+      }
+
+      // 2. หยุดการหมุนของ Spinner และเปลี่ยนเป็นวงแหวนสีเขียวคงที่เพื่อความคลีน
+      if (spinner) {
+        spinner.classList.remove('animate-spin', 'border-t-transparent');
+        spinner.classList.add('border-emerald-500', 'bg-emerald-50');
+      }
+
+      // 3. แสดงชื่อผู้ใช้พร้อมคำยินดีต้อนรับ (ปิดเอฟเฟกต์กะพริบออกเพื่อให้จังหวะนี้ดูนิ่งและพรีเมียมขึ้น)
+      if (main) {
+        main.classList.remove('animate-pulse');
+        main.innerHTML = `ยินดีต้อนรับคุณ <span class="text-emerald-600 font-bold">${displayName}</span>`;
+      }
+
+      // 4. เปลี่ยนข้อความด้านล่างเป็นสถานะเข้าสู่ระบบสำเร็จ
+      if (sub) {
+        sub.innerHTML = `<span class="text-emerald-500 font-medium">✓ เข้าสู่ระบบสำเร็จแล้ว</span>`;
+      }
+    }
+
+    // ฟังก์ชันแสดงข้อผิดพลาดบนหน้าจอ
+    function showError(message) {
+      const errorScreen = document.getElementById('error-screen');
+      const errorMessage = document.getElementById('error-message');
+      const sub = document.getElementById('status-text-sub');
+
+      if (errorMessage) errorMessage.textContent = message;
+      if (errorScreen) errorScreen.classList.remove('hidden');
+    }
+
+    // ฟังก์ชันเช็คสถานะการเป็นเพื่อน
+    async function checkFriendshipStatus() {
+      try {
+        const friendship = await liff.getFriendship();
+        if (!friendship.friendFlag) {
+          if (typeof liff.requestFriendship === 'function') {
+            await liff.requestFriendship();
+            const verify = await liff.getFriendship();
+            if (verify.friendFlag) {
+              showToast('ขอบคุณที่เพิ่มเราเป็นเพื่อนครับ!', 'success');
+            }
+          }
+        }
+      } catch (err) {
+        console.warn("Friendship check error:", err);
+      }
+    }
+
+    // ฟังก์ชันหลัก
+    async function initApp() {
+      renderLoading('กำลังตรวจสอบสภาพแวดล้อม...');
+
+      try {
+        // 1. Init LIFF
+        await liff.init({
+          liffId: LIFF_ID,
+          withLoginOnExternalBrowser: true
+        });
+        await liff.ready;
+
+        // 2. เช็คการ Login
+        if (!liff.isLoggedIn()) {
+          renderLoading('กำลังพาไปหน้าเข้าสู่ระบบ...');
+          liff.login({ redirectUri: window.location.href });
+          return;
+        }
+
+        // 3. เช็คสถานะเพิ่มเพื่อน
+        renderLoading('ตรวจสอบสถานะสมาชิก...');
+        await checkFriendshipStatus();
+
+        // 4. ดึงข้อมูล Profile ผู้ใช้งาน
+        const profile = await liff.getProfile();
+
+        // 5. ดึง Path ปลายทางจาก Parameter 'url'
+        const urlParams = new URLSearchParams(window.location.search);
+        const redirectUrl = urlParams.get('url');
+
+        // ⚠️ จุดสำคัญ: ตรวจสอบกรณีไม่มีระบุ url parameter มา
+        if (!redirectUrl || redirectUrl.trim() === '') {
+          showError('ไม่พบ URL ปลายทางในระบบ (Missing Redirect URL)');
+          showCustomAlert(
+            'ไม่สามารถเข้าสู่ระบบได้',
+            'ลิงก์นี้ไม่มีการระบุ URL ปลายทาง กรุณาติดต่อผู้ดูแลระบบเพื่อตรวจสอบอีกครั้ง',
+            'warning'
+          );
+          return; // สั่งหยุดทำงาน ไม่ทำการ Redirect ใดๆ ทั้งสิ้น
+        }
+
+        // 6. เปลี่ยนเป็นหน้าจอ Welcome แสดงรูปโปรไฟล์และชื่อจริงจาก LINE
+        showToast('ยืนยันตัวตนสำเร็จ', 'success');
+        renderWelcomeScreen(profile.displayName, profile.pictureUrl);
+
+        // 7. หน่วงเวลาเล็กน้อย (2.5 วินาที) ให้ผู้ใช้เห็นหน้าจอ Welcome ก่อนส่งตัวไปปลายทาง
+        setTimeout(() => {
+          const targetPath = decodeURIComponent(redirectUrl);
+          console.log(`Redirecting to: ${targetPath}`);
+
+          // ใช้ location.replace เพื่อความปลอดภัยและไม่ให้ย้อนกลับมาหน้าโหลดดิ้งได้
+          window.location.replace(targetPath);
+        }, 2500);
+
+      } catch (err) {
+        console.error("Init Error:", err);
+        showError('ไม่สามารถเชื่อมต่อระบบได้: ' + err.message);
+        showCustomAlert(
+          'เกิดข้อผิดพลาดในการเริ่มต้นระบบ',
+          err.message || 'กรุณาลองใหม่อีกครั้งในภายหลัง',
+          'error'
+        );
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>
