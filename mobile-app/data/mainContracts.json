@@ -1,0 +1,610 @@
+[
+    {
+        "id":  "001",
+        "code":  "001",
+        "name":  "001: ตลอดชีพ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "002",
+        "code":  "002",
+        "name":  "002: ตลอดชีพแปรสภาพได้",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "003",
+        "code":  "003",
+        "name":  "003: สะสมทรัพย์เพื่ออนาคตเยาวชน",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "004",
+        "code":  "004",
+        "name":  "004: สะสมทรัพย์(มีเงินสมนาคุณ)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "005",
+        "code":  "005",
+        "name":  "005: สะสมทรัพย์ชำระครั้งเดียวมีเงิ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "012",
+        "code":  "012",
+        "name":  "012: คุ้มครองจำกัดเวลา",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "016",
+        "code":  "016",
+        "name":  "016: สะสมทรัพย์ (ไม่มีเงินสมนาคุณ)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "018",
+        "code":  "018",
+        "name":  "018: ธุรกิจ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "021",
+        "code":  "021",
+        "name":  "021: สินเพิ่มพูน",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "024",
+        "code":  "024",
+        "name":  "024: สะสมทรัพย์เพื่ออนาคต",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "026",
+        "code":  "026",
+        "name":  "026: สะสมทรัพย์อำนวยประโยชน์ล่วงหน้",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "028",
+        "code":  "028",
+        "name":  "028: คุ้มครองเพื่อปลดพันธะ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "029",
+        "code":  "029",
+        "name":  "029: อำนวยประโยชน์ตลอดชีพ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "030",
+        "code":  "030",
+        "name":  "030: ส่งเสริมธุรกิจ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "031",
+        "code":  "031",
+        "name":  "031: สายธารมรดก",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "032",
+        "code":  "032",
+        "name":  "032: สินเบญจพร",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "033",
+        "code":  "033",
+        "name":  "033: ตลอดชีพเพื่อผู้เยาว์",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "034",
+        "code":  "034",
+        "name":  "034: เคหะบริการ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "036",
+        "code":  "036",
+        "name":  "036: สินศึกษา",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "037",
+        "code":  "037",
+        "name":  "037: 315",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "038",
+        "code":  "038",
+        "name":  "038: เบญจเพิ่มพูน",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "039",
+        "code":  "039",
+        "name":  "039: ราชพฤกษ์ 1",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "040",
+        "code":  "040",
+        "name":  "040: ราชพฤกษ์ 2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "041",
+        "code":  "041",
+        "name":  "041: ราชพฤกษ์ 3",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "042",
+        "code":  "042",
+        "name":  "042: ราชพฤกษ์ 4",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "043",
+        "code":  "043",
+        "name":  "043: อภิพร",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "044",
+        "code":  "044",
+        "name":  "044: เคหะบริการ1",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "045",
+        "code":  "045",
+        "name":  "045: เคหะบริการ2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "046",
+        "code":  "046",
+        "name":  "046: ขุมทอง",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "047",
+        "code":  "047",
+        "name":  "047: นิรันดร์พร",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "048",
+        "code":  "048",
+        "name":  "048: สะสมทรัพย์ (ไม่มีเงินปันผล)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "049",
+        "code":  "049",
+        "name":  "049: ธุรกิจ (ไม่มีเงินปันผล)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "050",
+        "code":  "050",
+        "name":  "050: ทรัพย์กาญจนา",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "054",
+        "code":  "054",
+        "name":  "054: ทรัพย์เพิ่มทวี",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "055",
+        "code":  "055",
+        "name":  "055: ตลอดชีพทวีคูณ 20 ปี",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "058",
+        "code":  "058",
+        "name":  "058: ตรีทรัพย์ (เพศชาย)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "059",
+        "code":  "059",
+        "name":  "059: ตรีทรัพย์ (เพศหญิง)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "060",
+        "code":  "060",
+        "name":  "060: สะสมทรัพย์ไม่มีเงินปันผล 20/20",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "061",
+        "code":  "061",
+        "name":  "061: สะสมทรัพย์ไม่มีเงินปันผล 60/60",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "062",
+        "code":  "062",
+        "name":  "062: ตลอดชีพ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "063",
+        "code":  "063",
+        "name":  "063: ตลอดชีพ 90/21(50)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "064",
+        "code":  "064",
+        "name":  "064: ตลอดชีพ 90/21(100)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "065",
+        "code":  "065",
+        "name":  "065: ตลอดชีพ 90/21(พิเศษ)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "066",
+        "code":  "066",
+        "name":  "066: อภิพร 2 (90/21)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "067",
+        "code":  "067",
+        "name":  "067: นิรันดร์พร 2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "068",
+        "code":  "068",
+        "name":  "068: ทวีทรัพย์ 5/1",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "069",
+        "code":  "069",
+        "name":  "069: สะสมทรัพย์ 2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "070",
+        "code":  "070",
+        "name":  "070: ทรัพย์กาญจนา 2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "071",
+        "code":  "071",
+        "name":  "071: ทรัพย์เพิ่มทวี 2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "072",
+        "code":  "072",
+        "name":  "072: ราชพฤกษ์ 5",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "073",
+        "code":  "073",
+        "name":  "073: ราชพฤกษ์ 6",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "074",
+        "code":  "074",
+        "name":  "074: ราชพฤกษ์ 7",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "075",
+        "code":  "075",
+        "name":  "075: ตรีทรัพย์ 2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "076",
+        "code":  "076",
+        "name":  "076: คุ้มครองจำกัดเวลา",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "078",
+        "code":  "078",
+        "name":  "078: บำนาญ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "079",
+        "code":  "079",
+        "name":  "079: ทวีทรัพย์ 7/1",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "080",
+        "code":  "080",
+        "name":  "080: ทวีทรัพย์ 10/1",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "081",
+        "code":  "081",
+        "name":  "081: ทวีทรัพย์ 12/1",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "082",
+        "code":  "082",
+        "name":  "082: อนาคตการศึกษา (21/17)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "083",
+        "code":  "083",
+        "name":  "083: คุ้มทวี 2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "084",
+        "code":  "084",
+        "name":  "084: ทรัพย์ทวี 5/1 (มีเงินสมนาคุณ)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "085",
+        "code":  "085",
+        "name":  "085: ทรัพย์ทวี 7/1 (มีเงินสมนาคุณ)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "086",
+        "code":  "086",
+        "name":  "086: ทรัพย์ทวี 10/1 (มีเงินสมนาคุณ)",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "093",
+        "code":  "093",
+        "name":  "093: ฉัตรอรุณ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "094",
+        "code":  "094",
+        "name":  "094: เบญจทรัพย์",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  true
+    },
+    {
+        "id":  "I01",
+        "code":  "I01",
+        "name":  "I01: ออมทรัพย์รายเดือนแบบที่1",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "I02",
+        "code":  "I02",
+        "name":  "I02: ออมทรัพย์รายเดือนแบบที่2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "I04",
+        "code":  "I04",
+        "name":  "I04: ออมทรัพย์รายเดือนแบบที่4",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "I05",
+        "code":  "I05",
+        "name":  "I05: ออมทรัพย์รายเดือนแบบที่5",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "I06",
+        "code":  "I06",
+        "name":  "I06: รวงทิพย์",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "P01",
+        "code":  "P01",
+        "name":  "P01: ปรางค์อรุณสัมพันธ์ 1",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "P02",
+        "code":  "P02",
+        "name":  "P02: ปรางค์อรุณสัมพันธ์ 2",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "P03",
+        "code":  "P03",
+        "name":  "P03: ปรางค์อรุณสัมพันธ์ 3",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "S01",
+        "code":  "S01",
+        "name":  "S01: โครงการพิเศษ 50 ปี",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "S02",
+        "code":  "S02",
+        "name":  "S02: โครงการพิเศษ ปรางค์อรุณ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    },
+    {
+        "id":  "S03",
+        "code":  "S03",
+        "name":  "S03: โครงการ สะสมทรัพย์พิเศษ",
+        "contractType":  "main",
+        "sourceTable":  "PLAN_EXT",
+        "newBusinessAllowed":  false
+    }
+]

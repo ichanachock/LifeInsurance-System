@@ -1,0 +1,382 @@
+[
+    {
+        "ITEMITEM":  "001     ",
+        "plan_type_desc":  "001: ตลอดชีพ",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "002     ",
+        "plan_type_desc":  "002: ตลอดชีพแปรสภาพได้",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "003     ",
+        "plan_type_desc":  "003: สะสมทรัพย์เพื่ออนาคตเยาวชน",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "004     ",
+        "plan_type_desc":  "004: สะสมทรัพย์(มีเงินสมนาคุณ)",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "005     ",
+        "plan_type_desc":  "005: สะสมทรัพย์ชำระครั้งเดียวมีเงิ",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "012     ",
+        "plan_type_desc":  "012: คุ้มครองจำกัดเวลา",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "016     ",
+        "plan_type_desc":  "016: สะสมทรัพย์ (ไม่มีเงินสมนาคุณ)",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "018     ",
+        "plan_type_desc":  "018: ธุรกิจ",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "021     ",
+        "plan_type_desc":  "021: สินเพิ่มพูน",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "024     ",
+        "plan_type_desc":  "024: สะสมทรัพย์เพื่ออนาคต",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "026     ",
+        "plan_type_desc":  "026: สะสมทรัพย์อำนวยประโยชน์ล่วงหน้",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "028     ",
+        "plan_type_desc":  "028: คุ้มครองเพื่อปลดพันธะ",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "029     ",
+        "plan_type_desc":  "029: อำนวยประโยชน์ตลอดชีพ",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "030     ",
+        "plan_type_desc":  "030: ส่งเสริมธุรกิจ",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "031     ",
+        "plan_type_desc":  "031: สายธารมรดก",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "032     ",
+        "plan_type_desc":  "032: สินเบญจพร",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "033     ",
+        "plan_type_desc":  "033: ตลอดชีพเพื่อผู้เยาว์",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "034     ",
+        "plan_type_desc":  "034: เคหะบริการ",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "036     ",
+        "plan_type_desc":  "036: สินศึกษา",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "037     ",
+        "plan_type_desc":  "037: 315",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "038     ",
+        "plan_type_desc":  "038: เบญจเพิ่มพูน",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "039     ",
+        "plan_type_desc":  "039: ราชพฤกษ์ 1",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "040     ",
+        "plan_type_desc":  "040: ราชพฤกษ์ 2",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "041     ",
+        "plan_type_desc":  "041: ราชพฤกษ์ 3",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "042     ",
+        "plan_type_desc":  "042: ราชพฤกษ์ 4",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "043     ",
+        "plan_type_desc":  "043: อภิพร",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "044     ",
+        "plan_type_desc":  "044: เคหะบริการ1",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "045     ",
+        "plan_type_desc":  "045: เคหะบริการ2",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "046     ",
+        "plan_type_desc":  "046: ขุมทอง",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "047     ",
+        "plan_type_desc":  "047: นิรันดร์พร",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "048     ",
+        "plan_type_desc":  "048: สะสมทรัพย์ (ไม่มีเงินปันผล)",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "049     ",
+        "plan_type_desc":  "049: ธุรกิจ (ไม่มีเงินปันผล)",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "050     ",
+        "plan_type_desc":  "050: ทรัพย์กาญจนา",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "054     ",
+        "plan_type_desc":  "054: ทรัพย์เพิ่มทวี",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "055     ",
+        "plan_type_desc":  "055: ตลอดชีพทวีคูณ 20 ปี",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "058     ",
+        "plan_type_desc":  "058: ตรีทรัพย์ (เพศชาย)",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "059     ",
+        "plan_type_desc":  "059: ตรีทรัพย์ (เพศหญิง)",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "060     ",
+        "plan_type_desc":  "060: สะสมทรัพย์ไม่มีเงินปันผล 20/20",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "061     ",
+        "plan_type_desc":  "061: สะสมทรัพย์ไม่มีเงินปันผล 60/60",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "062     ",
+        "plan_type_desc":  "062: ตลอดชีพ",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "063     ",
+        "plan_type_desc":  "063: ตลอดชีพ 90/21(50)",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "064     ",
+        "plan_type_desc":  "064: ตลอดชีพ 90/21(100)",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "065     ",
+        "plan_type_desc":  "065: ตลอดชีพ 90/21(พิเศษ)",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "066     ",
+        "plan_type_desc":  "066: อภิพร 2 (90/21)",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "067     ",
+        "plan_type_desc":  "067: นิรันดร์พร 2",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "068     ",
+        "plan_type_desc":  "068: ทวีทรัพย์ 5/1",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "069     ",
+        "plan_type_desc":  "069: สะสมทรัพย์ 2",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "070     ",
+        "plan_type_desc":  "070: ทรัพย์กาญจนา 2",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "071     ",
+        "plan_type_desc":  "071: ทรัพย์เพิ่มทวี 2",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "072     ",
+        "plan_type_desc":  "072: ราชพฤกษ์ 5",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "073     ",
+        "plan_type_desc":  "073: ราชพฤกษ์ 6",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "074     ",
+        "plan_type_desc":  "074: ราชพฤกษ์ 7",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "075     ",
+        "plan_type_desc":  "075: ตรีทรัพย์ 2",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "076     ",
+        "plan_type_desc":  "076: คุ้มครองจำกัดเวลา",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "078     ",
+        "plan_type_desc":  "078: บำนาญ",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "079     ",
+        "plan_type_desc":  "079: ทวีทรัพย์ 7/1",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "080     ",
+        "plan_type_desc":  "080: ทวีทรัพย์ 10/1",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "081     ",
+        "plan_type_desc":  "081: ทวีทรัพย์ 12/1",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "082     ",
+        "plan_type_desc":  "082: อนาคตการศึกษา (21/17)",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "083     ",
+        "plan_type_desc":  "083: คุ้มทวี 2",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "084     ",
+        "plan_type_desc":  "084: ทรัพย์ทวี 5/1 (มีเงินสมนาคุณ)",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "085     ",
+        "plan_type_desc":  "085: ทรัพย์ทวี 7/1 (มีเงินสมนาคุณ)",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "086     ",
+        "plan_type_desc":  "086: ทรัพย์ทวี 10/1 (มีเงินสมนาคุณ)",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "093",
+        "plan_type_desc":  "093: ฉัตรอรุณ",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "094",
+        "plan_type_desc":  "094: เบญจทรัพย์",
+        "nb_allow_flag":  "Y"
+    },
+    {
+        "ITEMITEM":  "I01     ",
+        "plan_type_desc":  "I01: ออมทรัพย์รายเดือนแบบที่1",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "I02     ",
+        "plan_type_desc":  "I02: ออมทรัพย์รายเดือนแบบที่2",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "I04     ",
+        "plan_type_desc":  "I04: ออมทรัพย์รายเดือนแบบที่4",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "I05     ",
+        "plan_type_desc":  "I05: ออมทรัพย์รายเดือนแบบที่5",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "I06     ",
+        "plan_type_desc":  "I06: รวงทิพย์",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "P01     ",
+        "plan_type_desc":  "P01: ปรางค์อรุณสัมพันธ์ 1",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "P02     ",
+        "plan_type_desc":  "P02: ปรางค์อรุณสัมพันธ์ 2",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "P03     ",
+        "plan_type_desc":  "P03: ปรางค์อรุณสัมพันธ์ 3",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "S01     ",
+        "plan_type_desc":  "S01: โครงการพิเศษ 50 ปี",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "S02     ",
+        "plan_type_desc":  "S02: โครงการพิเศษ ปรางค์อรุณ",
+        "nb_allow_flag":  "N"
+    },
+    {
+        "ITEMITEM":  "S03     ",
+        "plan_type_desc":  "S03: โครงการ สะสมทรัพย์พิเศษ",
+        "nb_allow_flag":  "N"
+    }
+]

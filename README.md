@@ -61,3 +61,54 @@ git status
 
 - `google-apps-script.js` โค้ดสำหรับนำไปวางใน Google Apps Script
 - `GOOGLE_SHEETS_SETUP.md` คู่มือการตั้งค่า Google Sheets และ Apps Script
+
+## Mobile App คำนวณเบี้ยประกัน
+
+มีโปรเจ็ก mobile app เพิ่มในโฟลเดอร์:
+
+```text
+C:\LifeInsurance-System\mobile-app
+```
+
+แอปนี้ใช้ Expo / React Native และนำข้อมูลจากโปรแกรมเดิมใน:
+
+```text
+C:\SELICProposal2003 _new 2
+```
+
+ขั้นตอนการทำงานในแอป:
+
+1. เลือกเพศของผู้เอาประกัน
+2. ใส่อายุ
+3. เลือกสัญญาหลัก
+4. ใส่ทุนประกัน
+5. เลือกสัญญาเพิ่มเติม
+
+รันแอป:
+
+```powershell
+cd C:\LifeInsurance-System\mobile-app
+npm install
+npm run web -- --port 8081
+```
+
+นำเข้าข้อมูลจากโปรแกรมเดิม:
+
+```powershell
+cd C:\LifeInsurance-System\mobile-app
+npm run import:selic
+```
+
+ข้อมูลที่นำเข้า:
+
+- สัญญาหลัก
+- สัญญาเพิ่มเติม
+- ตารางเบี้ยสัญญาหลัก
+- ตารางเบี้ยสัญญาเพิ่มเติมที่ map ได้
+- ข้อมูลอาชีพ
+
+รายละเอียดเพิ่มเติมดูที่:
+
+```text
+mobile-app\README.md
+```

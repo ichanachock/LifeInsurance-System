@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+.expo-home/
+expo.log
+expo.err.log
+expo-check.log
+expo-workflow-check.log
+expo-rider-check.log
+expo-rider-final-check.log
+expo-web.err.log
+expo-web.out.log
+npm-debug.log*

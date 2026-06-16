@@ -1,0 +1,153 @@
+{
+  "project": {
+    "name": "FIN Insurance Broker - LINE LIFF Redirect Gateway",
+    "version": "1.0.0",
+    "description": "Authentication Gateway using LINE LIFF SDK v2 for FIN Insurance Broker",
+    "author": "maxga118",
+    "created": "2026-05-20"
+  },
+  "configuration": {
+    "liff": {
+      "placeholder_id": "xxxxxxx",
+      "instruction": "ใส่ LIFF ID ของคุณที่นี่ (สามารถหาได้จาก LINE Developers Console)",
+      "required": true,
+      "location": "index.html - line 291"
+    },
+    "endpoint_url": {
+      "development": "http://localhost:3000",
+      "staging": "https://fin-auth-gateway.onrender.com",
+      "production": "https://your-custom-domain.com",
+      "note": "ต้องเป็น HTTPS เท่านั้น"
+    }
+  },
+  "deployment": {
+    "github": {
+      "repository_name": "fin-liff-redirect",
+      "visibility": "Private",
+      "branch": "main",
+      "url_format": "https://github.com/YOUR_USERNAME/fin-liff-redirect"
+    },
+    "hosting": {
+      "provider": "Render.com",
+      "site_name": "fin-auth-gateway",
+      "build_command": "",
+      "publish_directory": ".",
+      "url_format": "https://fin-auth-gateway.onrender.com"
+    }
+  },
+  "line_configuration": {
+    "provider": {
+      "name": "FIN Insurance"
+    },
+    "messaging_api_channel": {
+      "name": "FIN Broker Authentication",
+      "description": "Authentication Gateway for FIN Insurance",
+      "category": "Utilities"
+    },
+    "liff_app": {
+      "name": "FIN-Redirect-Gateway",
+      "size": "Full",
+      "endpoint_url": "https://fin-auth-gateway.onrender.com",
+      "scopes": ["profile", "openid"],
+      "bot_prompt": "Aggressive"
+    }
+  },
+  "url_examples": {
+    "google_redirect": "https://liff.line.me/YOUR_LIFF_ID?url=https%3A%2F%2Fwww.google.com",
+    "dashboard_redirect": "https://liff.line.me/YOUR_LIFF_ID?url=https%3A%2F%2Fyourapp.com%2Fdashboard",
+    "with_params": "https://liff.line.me/YOUR_LIFF_ID?url=https%3A%2F%2Fyourapp.com%2Fuser%3Fid%3D123",
+    "note": "ใช้ URL Encoder เพื่อ Encode target URL ก่อนเพิ่มลงใน ?url= parameter"
+  },
+  "dependencies": {
+    "line_liff_sdk": {
+      "version": "v2",
+      "cdn": "https://static.line-scdn.net/liff/edge/2/sdk.js",
+      "docs": "https://developers.line.biz/en/docs/liff/"
+    },
+    "tailwind_css": {
+      "version": "latest",
+      "cdn": "https://cdn.tailwindcss.com",
+      "docs": "https://tailwindcss.com/docs"
+    },
+    "sweetalert2": {
+      "version": "^11",
+      "cdn": "https://cdn.jsdelivr.net/npm/sweetalert2@11",
+      "docs": "https://sweetalert2.github.io/"
+    },
+    "thai_font": {
+      "name": "LINE Seed Sans TH",
+      "cdn": "https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/LINESeedSansTH/LINESeedSansTH.css"
+    }
+  },
+  "security": {
+    "https_only": true,
+    "validation_required": true,
+    "friendship_check": "Aggressive",
+    "url_validation": "Always URL Encode target URL",
+    "cors_headers": "Configure for Production"
+  },
+  "features": {
+    "authentication": {
+      "line_login": "Automatic if not logged in",
+      "friendship_verification": "Check if user is friend with LINE OA",
+      "profile_retrieval": "Get user display name and picture"
+    },
+    "ui": {
+      "loading_screen": "Animated with spinning ring",
+      "welcome_screen": "Shows user profile picture and name",
+      "error_handling": "SweetAlert2 modal for errors",
+      "toast_notifications": "Toast messages for user feedback"
+    },
+    "redirect": {
+      "method": "window.location.replace()",
+      "delay": "2.5 seconds after welcome screen",
+      "validation": "Checks if URL parameter is provided"
+    }
+  },
+  "browser_support": {
+    "chrome": "Latest",
+    "safari": "Latest",
+    "firefox": "Latest",
+    "line_app": "Latest iOS & Android"
+  },
+  "troubleshooting": {
+    "liff_id_error": {
+      "symptom": "LIFF ID is not initialized",
+      "solution": "Verify LIFF ID from LINE Developers Console"
+    },
+    "endpoint_error": {
+      "symptom": "Cannot load LIFF SDK",
+      "solution": "Check Endpoint URL in LINE Developers matches Render URL"
+    },
+    "not_opening_in_line": {
+      "symptom": "User is not in LINE",
+      "solution": "Must be opened from within LINE app, not directly from browser"
+    },
+    "no_friend_prompt": {
+      "symptom": "Bot prompt not showing",
+      "solution": "Set Bot Prompt to 'Aggressive' in LINE Developers"
+    }
+  },
+  "resources": {
+    "line_docs": "https://developers.line.biz/en/docs/liff/",
+    "line_login_guide": "https://developers.line.biz/en/docs/line-login/",
+    "tailwind_docs": "https://tailwindcss.com/docs",
+    "sweetalert2_docs": "https://sweetalert2.github.io/",
+    "url_encoder": "https://www.urlencoder.org/"
+  },
+  "notes": {
+    "important": [
+      "Always use HTTPS for Endpoint URL",
+      "Keep LIFF ID secret in production",
+      "Test URL encoding carefully",
+      "Set Bot Prompt to Aggressive for friend verification",
+      "Use Private repository on GitHub"
+    ],
+    "performance": [
+      "Loading screen appears instantly",
+      "Welcome screen shown for 2.5 seconds",
+      "All validations happen before redirect",
+      "No unnecessary API calls"
+    ]
+  }
+}

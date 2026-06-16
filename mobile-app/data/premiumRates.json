@@ -1,0 +1,31 @@
+{
+  "minimumSumAssured": 50000,
+  "ageBands": [
+    { "from": 1, "to": 25, "ratePerThousand": 2.6 },
+    { "from": 26, "to": 35, "ratePerThousand": 3.3 },
+    { "from": 36, "to": 45, "ratePerThousand": 4.6 },
+    { "from": 46, "to": 55, "ratePerThousand": 6.8 },
+    { "from": 56, "to": 65, "ratePerThousand": 10.4 },
+    { "from": 66, "to": 99, "ratePerThousand": 15.8 }
+  ],
+  "genderFactors": {
+    "female": 1,
+    "male": 1.06
+  },
+  "healthFactors": {
+    "preferred": 0.92,
+    "standard": 1,
+    "elevated": 1.22
+  },
+  "payYearFactors": [
+    { "maxYears": 10, "factor": 1.18 },
+    { "maxYears": 15, "factor": 1.08 },
+    { "maxYears": 99, "factor": 1 }
+  ],
+  "paymentModes": [
+    { "id": "monthly", "name": "รายเดือน", "multiplier": 0.0833333333 },
+    { "id": "quarterly", "name": "ราย 3 เดือน", "multiplier": 0.255 },
+    { "id": "semiannual", "name": "ราย 6 เดือน", "multiplier": 0.51 },
+    { "id": "annual", "name": "รายปี", "multiplier": 1 }
+  ]
+}

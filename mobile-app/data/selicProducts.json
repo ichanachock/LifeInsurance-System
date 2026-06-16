@@ -1,0 +1,148 @@
+{
+    "value":  [
+                  {
+                      "policyTerm":  99,
+                      "desc":  "Whole Life protection, 20-year payment term, covers up to age 99.",
+                      "paymentTerm":  20,
+                      "ipdRoom":  null,
+                      "category":  "life",
+                      "opdLimit":  null,
+                      "name":  "Traditional Whole Life 20/20",
+                      "code":  "T5664",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  15,
+                      "desc":  "Savings plan, 10-year payment term, 15-year coverage, annual dividends.",
+                      "paymentTerm":  10,
+                      "ipdRoom":  null,
+                      "category":  "life",
+                      "opdLimit":  null,
+                      "name":  "Endowment 15/10",
+                      "code":  "T5650",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  10,
+                      "desc":  "Short term savings plan, 5-year payment, 10-year coverage, excellent tax deduction.",
+                      "paymentTerm":  5,
+                      "ipdRoom":  null,
+                      "category":  "life",
+                      "opdLimit":  null,
+                      "name":  "Smart Saving 10/5",
+                      "code":  "T5688",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  10,
+                      "desc":  "Term insurance, 10-year payment, 10-year coverage, high protection with lower cost.",
+                      "paymentTerm":  10,
+                      "ipdRoom":  null,
+                      "category":  "life",
+                      "opdLimit":  null,
+                      "name":  "Traditional Term 10/10",
+                      "code":  "T3590",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  10,
+                      "desc":  "Takaful saving contract 10/4, Sharia compliant, 4-year payment, 10-year coverage.",
+                      "paymentTerm":  4,
+                      "ipdRoom":  null,
+                      "category":  "takaful",
+                      "opdLimit":  null,
+                      "name":  "Takaful Saving 10/4",
+                      "code":  "TT504",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  99,
+                      "desc":  "Takaful whole life, 20-year payment, security for Muslim families.",
+                      "paymentTerm":  20,
+                      "ipdRoom":  null,
+                      "category":  "takaful",
+                      "opdLimit":  null,
+                      "name":  "Takaful Whole Life 20/20",
+                      "code":  "TT506",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  15,
+                      "desc":  "Takaful collateral security contract, 15-year payment, 15-year coverage.",
+                      "paymentTerm":  15,
+                      "ipdRoom":  null,
+                      "category":  "takaful",
+                      "opdLimit":  null,
+                      "name":  "Takaful Protection 15/15",
+                      "code":  "TT502",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  20,
+                      "desc":  "Takaful education fund, 15-year payment, 20-year coverage.",
+                      "paymentTerm":  15,
+                      "ipdRoom":  null,
+                      "category":  "takaful",
+                      "opdLimit":  null,
+                      "name":  "Takaful Education 20/15",
+                      "code":  "TT513",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  null,
+                      "desc":  "Inpatient hospitalization core plan, room limit 6,000 THB/day.",
+                      "paymentTerm":  null,
+                      "ipdRoom":  6000,
+                      "category":  "health",
+                      "opdLimit":  1500,
+                      "name":  "Health IPD Platinum",
+                      "code":  "TH527",
+                      "thaiName":  ""
+                  },
+                  {
+                      "policyTerm":  null,
+                      "desc":  "Outpatient \u0026 inpatient core plan, room limit 4,000 THB/day.",
+                      "paymentTerm":  null,
+                      "ipdRoom":  4000,
+                      "category":  "health",
+                      "opdLimit":  2500,
+                      "name":  "Health OPD Deluxe",
+                      "code":  "TH584",
+                      "thaiName":  "APL - 0X3"
+                  },
+                  {
+                      "policyTerm":  null,
+                      "desc":  "Inpatient core plan, economy room limit 2,500 THB/day.",
+                      "paymentTerm":  null,
+                      "ipdRoom":  2500,
+                      "category":  "health",
+                      "opdLimit":  0,
+                      "name":  "Health Inpatient Economy",
+                      "code":  "TH626",
+                      "thaiName":  "X3EF"
+                  },
+                  {
+                      "policyTerm":  1,
+                      "desc":  "Personal Accident plan, covers loss of organs or disability.",
+                      "paymentTerm":  1,
+                      "ipdRoom":  null,
+                      "category":  "accident",
+                      "opdLimit":  null,
+                      "name":  "Accident PA Choice",
+                      "code":  "T6640",
+                      "thaiName":  "X3EF"
+                  },
+                  {
+                      "policyTerm":  1,
+                      "desc":  "Premium PA plan, doubles accident medical expense limits.",
+                      "paymentTerm":  1,
+                      "ipdRoom":  null,
+                      "category":  "accident",
+                      "opdLimit":  null,
+                      "name":  "Accident PA Premium Shield",
+                      "code":  "T6660",
+                      "thaiName":  "0X3"
+                  }
+              ],
+    "Count":  13
+}
