@@ -89,6 +89,25 @@
 
   <script>
     const LIFF_ID = "2010419567-tIgtTpB2"; // ใส่ LIFF ID ของคุณที่นี่
+    const REDIRECT_URL_STORAGE_KEY = "fin-liff-redirect-url";
+    const DEFAULT_REDIRECT_URL = "https://ichanachock.github.io/LifeInsurance-System/";
+
+    function getRedirectUrlFromQuery() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('url');
+    }
+
+    function rememberRedirectUrl() {
+      const redirectUrl = getRedirectUrlFromQuery();
+      if (redirectUrl && redirectUrl.trim() !== '') {
+        sessionStorage.setItem(REDIRECT_URL_STORAGE_KEY, redirectUrl);
+      }
+      return redirectUrl;
+    }
+
+    function getRedirectUrl() {
+      return getRedirectUrlFromQuery() || sessionStorage.getItem(REDIRECT_URL_STORAGE_KEY) || DEFAULT_REDIRECT_URL;
+    }
 
     // ฟังก์ชันแจ้งเตือนด้วย SweetAlert2 (แบบ Toast มุมขวาบน)
     function showToast(message, icon = 'info') {
@@ -231,6 +250,8 @@
       renderLoading('กำลังตรวจสอบสภาพแวดล้อม...');
 
       try {
+        rememberRedirectUrl();
+
         // 1. Init LIFF
         await liff.init({
           liffId: LIFF_ID,
@@ -253,8 +274,7 @@
         const profile = await liff.getProfile();
 
         // 5. ดึง Path ปลายทางจาก Parameter 'url'
-        const urlParams = new URLSearchParams(window.location.search);
-        const redirectUrl = urlParams.get('url');
+        const redirectUrl = getRedirectUrl();
 
         // ⚠️ จุดสำคัญ: ตรวจสอบกรณีไม่มีระบุ url parameter มา
         if (!redirectUrl || redirectUrl.trim() === '') {
@@ -274,6 +294,7 @@
         // 7. หน่วงเวลาเล็กน้อย (2.5 วินาที) ให้ผู้ใช้เห็นหน้าจอ Welcome ก่อนส่งตัวไปปลายทาง
         setTimeout(() => {
           const targetPath = decodeURIComponent(redirectUrl);
+          sessionStorage.removeItem(REDIRECT_URL_STORAGE_KEY);
           console.log(`Redirecting to: ${targetPath}`);
 
           // ใช้ location.replace เพื่อความปลอดภัยและไม่ให้ย้อนกลับมาหน้าโหลดดิ้งได้
