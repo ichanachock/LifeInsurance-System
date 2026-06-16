@@ -2,6 +2,35 @@
 
 บันทึกสรุปการตั้งค่า LINE LIFF สำหรับโปรเจกต์ LifeInsurance-System
 
+## สถานะล่าสุด
+
+อัปเดตล่าสุด: 16 มิถุนายน 2026
+
+- สร้าง LINE Login Channel แล้ว
+- สร้าง LIFF App แล้ว
+- ได้ `LIFF ID`: `2010419567-tIgtTpB2`
+- ใส่ `LIFF ID` ใน `liff-gateway/index.html` แล้ว
+- Endpoint URL ที่ควรใช้กับ GitHub Pages:
+
+```text
+https://ichanachock.github.io/LifeInsurance-System/liff-gateway/
+```
+
+- ตั้งค่า `Add friend option` / `Bot Prompt` เป็น `Aggressive`
+- แก้ปัญหาหลัง login แล้วค่า `url` หาย โดยให้ระบบจำ URL ปลายทางไว้ใน `sessionStorage`
+- ทดสอบลิงก์ LIFF redirect ไป Google สำเร็จแล้ว
+- สร้างหน้าเว็บขายประกันรถยนต์แล้วที่:
+
+```text
+https://ichanachock.github.io/LifeInsurance-System/car-insurance.html
+```
+
+ลิงก์ LIFF สำหรับเข้าเว็บประกันรถยนต์:
+
+```text
+https://liff.line.me/2010419567-tIgtTpB2?url=https%3A%2F%2Fichanachock.github.io%2FLifeInsurance-System%2Fcar-insurance.html
+```
+
 ## สถานะที่พบ
 
 - Channel เดิมที่เปิดอยู่เป็นประเภท `Messaging API Channel`

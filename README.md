@@ -10,6 +10,33 @@
 
 - GitHub Repository: https://github.com/ichanachock/LifeInsurance-System
 - GitHub Pages: https://ichanachock.github.io/LifeInsurance-System/
+- หน้าเว็บขายประกันรถยนต์: https://ichanachock.github.io/LifeInsurance-System/car-insurance.html
+- LIFF Gateway: https://ichanachock.github.io/LifeInsurance-System/liff-gateway/
+
+## สถานะล่าสุด
+
+อัปเดตล่าสุด: 16 มิถุนายน 2026
+
+- เว็บไซต์หลัก `index.html` ใช้งานผ่าน GitHub Pages แล้ว
+- Google Sheets Web App URL ถูกตั้งค่าใน `script.js` แล้ว
+- สร้าง LINE Login Channel และ LIFF App แล้ว
+- ตั้งค่า `LIFF ID` เป็น `2010419567-tIgtTpB2` ใน `liff-gateway/index.html` แล้ว
+- แก้ปัญหา LIFF login แล้วค่า `url` หาย โดยให้ระบบจำ URL ปลายทางไว้ก่อน login
+- ทดสอบ LIFF redirect ไป Google สำเร็จแล้ว
+- สร้างหน้าเว็บขายประกันรถยนต์ `car-insurance.html` แล้ว
+- Push หน้าเว็บประกันรถยนต์ขึ้น GitHub แล้ว
+
+ลิงก์ทดสอบ LIFF ไป Google:
+
+```text
+https://liff.line.me/2010419567-tIgtTpB2?url=https%3A%2F%2Fwww.google.com
+```
+
+ลิงก์ใช้งาน LIFF ไปหน้าเว็บประกันรถยนต์:
+
+```text
+https://liff.line.me/2010419567-tIgtTpB2?url=https%3A%2F%2Fichanachock.github.io%2FLifeInsurance-System%2Fcar-insurance.html
+```
 
 ## วิธีเปิดทดสอบบนเครื่อง
 
@@ -61,6 +88,11 @@ git status
 
 - `google-apps-script.js` โค้ดสำหรับนำไปวางใน Google Apps Script
 - `GOOGLE_SHEETS_SETUP.md` คู่มือการตั้งค่า Google Sheets และ Apps Script
+- `car-insurance.html` หน้าเว็บขายประกันภัยรถยนต์
+- `car-insurance.css` ไฟล์ตกแต่งหน้าเว็บประกันภัยรถยนต์
+- `car-insurance.js` ระบบบันทึกข้อมูลฟอร์มประกันภัยรถยนต์ในเครื่องเบื้องต้น
+- `assets/car-insurance-hero.png` รูป hero สำหรับหน้าเว็บประกันภัยรถยนต์
+- `liff-gateway/index.html` หน้า LIFF Gateway สำหรับ login ผ่าน LINE แล้ว redirect ไป URL ปลายทาง
 
 ## Mobile App คำนวณเบี้ยประกัน
 
