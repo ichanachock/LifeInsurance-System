@@ -38,6 +38,90 @@ https://liff.line.me/2010419567-tIgtTpB2?url=https%3A%2F%2Fwww.google.com
 https://liff.line.me/2010419567-tIgtTpB2?url=https%3A%2F%2Fichanachock.github.io%2FLifeInsurance-System%2Fcar-insurance.html
 ```
 
+## ขั้นตอนต่อไปสำหรับใช้งานผ่าน LINE OA
+
+เป้าหมายคือให้ลูกค้ากดจาก LINE OA แล้วเข้าหน้าเว็บผ่าน LIFF ได้ถูกต้อง มีการ login ผ่าน LINE และ redirect ไปหน้าเว็บประกันรถยนต์
+
+### 1. ตรวจสอบการตั้งค่า LIFF ใน LINE Developers
+
+ใน LINE Developers Console ให้เข้า Channel ประเภท `LINE Login` ที่สร้าง LIFF App ไว้ แล้วตรวจสอบค่าต่อไปนี้:
+
+```text
+LIFF ID: 2010419567-tIgtTpB2
+Endpoint URL: https://ichanachock.github.io/LifeInsurance-System/liff-gateway/
+Size: Full
+Scopes: profile, openid
+Add friend option / Bot Prompt: Aggressive
+```
+
+ถ้า Endpoint URL ไม่ตรง ให้แก้เป็น URL ด้านบน แล้วกดบันทึก
+
+### 2. เตรียมลิงก์สำหรับใส่ใน LINE OA
+
+ลิงก์ที่ควรนำไปใช้กับ Rich Menu, ข้อความบรอดแคสต์, ปุ่ม, หรือ Flex Message คือ:
+
+```text
+https://liff.line.me/2010419567-tIgtTpB2?url=https%3A%2F%2Fichanachock.github.io%2FLifeInsurance-System%2Fcar-insurance.html
+```
+
+หลักการคือใช้รูปแบบนี้:
+
+```text
+https://liff.line.me/LIFF_ID?url=URL_ปลายทางที่_encode_แล้ว
+```
+
+ห้ามใส่ URL หน้าเว็บปลายทางแบบปกติโดยตรง ถ้าต้องการให้ลูกค้า login ผ่าน LIFF ก่อน
+
+### 3. ตั้งค่าปุ่มใน LINE OA
+
+ใน LINE Official Account Manager ให้เลือกตำแหน่งที่จะวางลิงก์ เช่น:
+
+- Rich Menu
+- ข้อความทักทาย
+- ข้อความตอบกลับอัตโนมัติ
+- Broadcast
+- Flex Message
+
+ให้ตั้ง Action ของปุ่มเป็น `URI` หรือ `Open URL` แล้วใส่ลิงก์ LIFF ด้านบน
+
+### 4. รายการทดสอบก่อนใช้งานจริง
+
+ให้ทดสอบจากแอป LINE บนมือถือจริง ไม่ควรใช้ browser ปกติเป็นหลัก
+
+Checklist:
+
+- เปิดลิงก์ LIFF จากแชต LINE ได้
+- ระบบพาไป login LINE ได้
+- หลัง login แล้วกลับมาหน้า LIFF Gateway ได้
+- หน้า LIFF Gateway แสดงสถานะต้อนรับได้
+- ระบบ redirect ไป `car-insurance.html` ได้
+- ปุ่มใน Rich Menu เปิดลิงก์เดียวกันได้
+- ถ้ายังไม่ได้เพิ่มเพื่อน OA ระบบแสดงการชวนเพิ่มเพื่อนตามที่ตั้งค่าไว้
+- เปิดจาก iPhone ได้
+- เปิดจาก Android ได้
+- ฟอร์มบนหน้าเว็บประกันรถยนต์กรอกและบันทึกในเครื่องได้
+
+### 5. งานที่ควรทำเพิ่มในขั้นถัดไป
+
+- เชื่อมฟอร์ม `car-insurance.html` เข้ากับ Google Sheets เหมือนระบบหลัก
+- เพิ่มช่อง LINE User ID หลัง login ผ่าน LIFF เพื่อรู้ว่าลูกค้าคนไหนกรอกฟอร์ม
+- เพิ่มหน้า thank you หลังส่งข้อมูลสำเร็จ
+- เพิ่มปุ่มติดต่อเจ้าหน้าที่ผ่าน LINE OA
+- เพิ่มข้อความแจ้งเตือนใน LINE OA เมื่อมี lead ใหม่ ถ้าต้องการ workflow แบบอัตโนมัติ
+- ทดสอบ privacy และข้อความขอความยินยอมก่อนเก็บข้อมูลลูกค้า
+
+### 6. วิธีอัปเดตหลังแก้ไข
+
+ทุกครั้งที่แก้ไฟล์แล้วต้องการให้เว็บออนไลน์อัปเดต ให้ใช้คำสั่ง:
+
+```powershell
+git add .
+git commit -m "Update LINE OA workflow"
+git push
+```
+
+หลัง push แล้วรอ GitHub Pages ประมาณ 1-3 นาที แล้วทดสอบใหม่จากแอป LINE
+
 ## วิธีเปิดทดสอบบนเครื่อง
 
 เปิดโฟลเดอร์โปรเจกต์:
