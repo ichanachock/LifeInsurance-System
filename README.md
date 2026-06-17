@@ -172,6 +172,8 @@ git status
 
 - `google-apps-script.js` โค้ดสำหรับนำไปวางใน Google Apps Script
 - `GOOGLE_SHEETS_SETUP.md` คู่มือการตั้งค่า Google Sheets และ Apps Script
+- `MOTOR_INSURANCE_SYSTEM_DESIGN.md` เอกสารออกแบบระบบขายประกันภัยรถยนต์ออนไลน์ครบวงจร
+- `MOTOR_INSURANCE_WORKFLOW_TH.md` Workflow การทำงานตั้งแต่ลูกค้าเข้าผ่าน LINE OA จนจบกระบวนการ
 - `car-insurance.html` หน้าเว็บขายประกันภัยรถยนต์
 - `car-insurance.css` ไฟล์ตกแต่งหน้าเว็บประกันภัยรถยนต์
 - `car-insurance.js` ระบบบันทึกข้อมูลฟอร์มประกันภัยรถยนต์ในเครื่องเบื้องต้น
